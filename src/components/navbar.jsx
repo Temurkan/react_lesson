@@ -1,5 +1,4 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -9,10 +8,38 @@ const Navbar = () => {
           live<span className='text-cyan-300 m-0'>.</span>
         </Link>
         <div className='flex gap-5'>
-          <Link to='/'>Home</Link>
-          <Link to='/about'>About</Link>
-          <Link to='/services'>Services</Link>
-          <Link to='/contact'>Contact</Link>
+          <NavLink
+            to='/'
+            className={({ isActive }) =>
+              isActive ? "border-b-2 border-cyan-300" : "border-b-0"
+            }
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to='/about'
+            className={({ isActive }) =>
+              isActive ? "border-b-2 border-cyan-300" : "border-b-0"
+            }
+          >
+            About
+          </NavLink>
+          <NavLink
+            to='/services'
+            className={({ isActive }) =>
+              isActive ? "border-b-2 border-cyan-300" : "border-b-0"
+            }
+          >
+            Services
+          </NavLink>
+          <NavLink
+            to='/contact'
+            className={({ isActive }) =>
+              isActive ? "border-b-2 border-cyan-300" : "border-b-0"
+            }
+          >
+            Contact
+          </NavLink>
         </div>
       </nav>
     </>
