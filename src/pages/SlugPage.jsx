@@ -14,22 +14,28 @@ const SlugPage = () => {
             src={product.image}
             alt={`${product.brand} ${product.model}`}
           />
-          <div className='w-[175px] h-[125px] flex mt-3 gap-3'>
-            <img
-              className='object-cover bg-gray-100 rounded-xl'
-              src={product.images[0]}
-              alt={`${product.brand} ${product.model}`}
-            />
-            <img
-              className='object-cover bg-gray-100 rounded-xl'
-              src={product.images[1]}
-              alt={`${product.brand} ${product.model}`}
-            />
-            <img
-              className='object-cover bg-gray-100 rounded-xl'
-              src={product.images[2]}
-              alt={`${product.brand} ${product.model}`}
-            />
+          <div className='flex mt-3 gap-3'>
+            <div className='w-44 h-36 flex justify-center bg-gray-100 rounded-xl'>
+              <img
+                className='object-contain'
+                src={product.images[0]}
+                alt={`${product.brand} ${product.model}`}
+              />
+            </div>
+            <div className='w-44 h-36 flex justify-center bg-gray-100 rounded-xl'>
+              <img
+                className='object-contain'
+                src={product.images[1]}
+                alt={`${product.brand} ${product.model}`}
+              />
+            </div>
+            <div className='w-44 h-36 flex justify-center bg-gray-100 rounded-xl'>
+              <img
+                className='object-contain '
+                src={product.images[2]}
+                alt={`${product.brand} ${product.model}`}
+              />
+            </div>
           </div>
         </div>
       </div>
